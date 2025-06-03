@@ -10,7 +10,8 @@ env:
   SONAR_TOKEN: ${{ secrets.SONAR_TKN }}
 
 jobs:
-  #build:
+  skip_job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,7 +35,7 @@ jobs:
         sonarcloud.token: ${{ env.SONAR_TKN }}
         sonarcloud.scannerVersion: "4.2.0.1873"
 
-deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
 
