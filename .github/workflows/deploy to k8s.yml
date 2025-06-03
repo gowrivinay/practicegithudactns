@@ -10,7 +10,7 @@ env:
   SONAR_TOKEN: ${{ secrets.SONAR_TKN }}
 
 jobs:
-  build:
+  #build:
     runs-on: ubuntu-latest
 
     steps:
